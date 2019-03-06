@@ -32,6 +32,7 @@ var W = canvas.width  = window.innerWidth-6;
 var H = canvas.height = window.innerHeight-50;
 
 world = {};
+colours = ["red", "blue", "yellow", "green", "purple"]
 
 //XXX: TODO Make this prettier!
 function drawCircle(context,entity) {
@@ -285,7 +286,7 @@ mouse.mouseuppers.push(function(x,y,clicked,e) {
 });
 
 mouse.mousedraggers.push(function(x,y,clicked,e) {
-    addEntityWithoutName({'x':x,'y':y,'colour':'white',
+    addEntityWithoutName({'x':x,'y':y,'colour':colours[counter%5],
                           'radius':10});
 });
 
