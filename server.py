@@ -102,7 +102,7 @@ def get_entity(entity):
 def clear():
     '''Clear the world out!'''
     myWorld.clear()
-    return jsonify(myWorld.get(), success=True)
+    return jsonify(success=True), 200
 
 if __name__ == "__main__":
     app.run(host="localhost", port=5000, threaded=True)
